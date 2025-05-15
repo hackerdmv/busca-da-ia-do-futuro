@@ -1,0 +1,104 @@
+body {
+    background: url("../static/butterfly.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Segoe UI', sans-serif;
+    color: rgb(73, 217, 236);
+    text-align: center;
+    padding: 40px;
+}
+
+.container {
+    background-color: rgba(92, 103, 155, 0.658); /* escurece o fundo para texto ficar visível */
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 70%;
+    border: none;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #6feafa;
+    color: rgb(24, 245, 234);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0097a7;
+}
+
+.results a {
+    color: #4dd0e1;
+    text-decoration: none;
+}
+
+.dedication {
+    margin-top: 30px;
+    color: #b3e5fc;
+}
+
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.butterfly {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+form input[type="text"] {
+    padding: 10px;
+    width: 70%;
+    border: none;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #00bcd4;
+    color: rgba(26, 31, 17, 0.925);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0097a7;
+}
+
+.results ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.results li {
+    margin: 10px 0;
+}
+
+.results a {
+    color: #4dd0e1;
+    text-decoration: none;
+}
+
+.dedication {
+    margin-top: 30px;
+    color: #b3e5fc;
+}

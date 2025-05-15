@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>BUSCA DA IA DO FUTURO</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='butterfly.png') }}" alt="Borboleta" class="butterfly">
+        <h1>🔍 BUSCA DA IA DO FUTURO</h1>
+        <form method="POST">
+            <input type="text" name="search" placeholder="Digite sua busca futurista..." required>
+            <button type="submit">Buscar</button>
+        </form>
+
+        {% if results %}
+        <div class="results">
+            <h2>Resultados:</h2>
+            <ul>
+                {% for result in results %}
+                <li><a href="{{ result }}" target="_blank">{{ result }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+        <p class="dedication">
+            ✨ Homenagem especial a <strong>Laura Rodrigues Vasques</strong> 💙<br>
+            Que sua vida voe como uma borboleta: leve, linda e livre!
+        </p>
+    </div>
+</body>
+</html>
