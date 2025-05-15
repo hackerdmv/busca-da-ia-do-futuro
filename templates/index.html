@@ -2,33 +2,25 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>BUSCA DA IA DO FUTURO</title>
+    <title>Busca da IA do Futuro</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <div class="container">
-        <img src="{{ url_for('static', filename='butterfly.png') }}" alt="Borboleta" class="butterfly">
-        <h1>🔍 BUSCA DA IA DO FUTURO</h1>
+        <img src="{{ url_for('static', filename='butterfly.png') }}" alt="Borboleta" class="logo">
+        <h1 class="titulo">BUSCA DA IA DO FUTURO</h1>
         <form method="POST">
-            <input type="text" name="search" placeholder="Digite sua busca futurista..." required>
+            <input type="text" name="query" placeholder="Digite sua busca futurista..." required>
             <button type="submit">Buscar</button>
         </form>
-
-        {% if results %}
-        <div class="results">
-            <h2>Resultados:</h2>
-            <ul>
-                {% for result in results %}
-                <li><a href="{{ result }}" target="_blank">{{ result }}</a></li>
-                {% endfor %}
-            </ul>
-        </div>
-        {% endif %}
-
-        <p class="dedication">
-            ✨ Homenagem especial a <strong>Laura Rodrigues Vasques</strong> 💙<br>
-            Que sua vida voe como uma borboleta: leve, linda e livre!
-        </p>
+        <p class="homenagem">🦋 Homenagem especial a <strong>Laura Rodrigues Vasques 💙</strong><br>
+        Que sua vida voe como uma borboleta: leve, linda e livre!</p>
     </div>
+
+    <footer>
+        <a href="https://wa.me/5521992070656" target="_blank">
+            <img src="{{ url_for('static', filename='patrocinador.png') }}" alt="Patrocinador" class="patrocinador">
+        </a>
+    </footer>
 </body>
 </html>
