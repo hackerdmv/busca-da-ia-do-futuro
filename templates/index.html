@@ -4,36 +4,13 @@
     <meta charset="UTF-8">
     <title>Resultados - Busca da IA do Futuro</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
-    <style>
-        .butterfly {
-            position: fixed;
-            width: 40px;
-            height: 40px;
-            background-image: url('{{ url_for('static', filename='butterfly.png') }}');
-            background-size: contain;
-            background-repeat: no-repeat;
-            animation: float 10s infinite;
-            pointer-events: none;
-            z-index: 999;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0) translateX(0); }
-            50% { transform: translateY(-200px) translateX(200px); }
-            100% { transform: translateY(0) translateX(0); }
-        }
-
-        footer {
-            margin-top: 50px;
-            text-align: center;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
-        <h1>🔍 Resultados para "{{ query }}"</h1>
+        <img src="{{ url_for('static', filename='butterfly.png') }}" alt="Borboleta" class="butterfly">
+        <img src="{{ url_for('static', filename='patrocinador.png') }}" alt="Patrocinador" class="patrocinador">
 
+        <h1>🔍 Resultados para "{{ query }}"</h1>
         <form method="POST">
             <input type="text" name="search" placeholder="Digite sua busca futurista..." required>
             <button type="submit">Buscar</button>
@@ -54,28 +31,6 @@
             ✨ Homenagem especial a <strong>Laura Rodrigues Vasques</strong> 💙<br>
             Que sua vida voe como uma borboleta: leve, linda e livre!
         </p>
-
-        <!-- Rodapé com patrocinador -->
-        <footer>
-            <img src="{{ url_for('static', filename='patrocinador.png') }}" alt="Patrocinador" style="width: 200px;">
-        </footer>
     </div>
-
-    <!-- Script das borboletas -->
-    <script>
-        function criarBorboleta() {
-            const borboleta = document.createElement('div');
-            borboleta.className = 'butterfly';
-            borboleta.style.left = Math.random() * window.innerWidth + 'px';
-            borboleta.style.top = Math.random() * window.innerHeight + 'px';
-            document.body.appendChild(borboleta);
-
-            setTimeout(() => {
-                borboleta.remove();
-            }, 10000); // remove após 10s
-        }
-
-        setInterval(criarBorboleta, 3000); // nova a cada 3 segundos
-    </script>
 </body>
 </html>

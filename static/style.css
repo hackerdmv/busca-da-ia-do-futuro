@@ -9,18 +9,6 @@ body {
     margin-top: 80px;
 }
 
-.logo {
-    width: 100px;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-.titulo {
-    color: #00bcd4;
-    font-size: 2.5em;
-    margin-bottom: 30px;
-}
-
 input[type="text"] {
     width: 40%;
     padding: 12px;
@@ -44,17 +32,18 @@ button:hover {
     background-color: #0194a6;
 }
 
-.homenagem {
+.dedication {
     margin-top: 30px;
     font-size: 16px;
     color: #555;
 }
 
-footer {
-    margin-top: 100px;
-}
-
 .patrocinador {
     width: 200px;
     height: auto;
+}
+
+.butterfly {
+    width: 80px;
+    margin-bottom: 20px;
 }
