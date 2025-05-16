@@ -8,7 +8,7 @@
 <body>
     <div class="container">
         <img src="{{ url_for('static', filename='butterfly.png') }}" alt="Borboleta" class="butterfly">
-        <img src="{{ url_for('static', filename='patrocinador.png') }}" alt="Patrocinador" class="patrocinador">
+        <img src="{{ url_for('static', filename='patrocinador.png') }}" alt="Patrocinador" style="width:200px;">
 
         <h1>🔍 Resultados para "{{ query }}"</h1>
         <form method="POST">
@@ -16,13 +16,12 @@
             <button type="submit">Buscar</button>
         </form>
 
-        {% if results %}
+        {% if query %}
         <div class="results">
             <h2>Resultados:</h2>
             <ul>
-                {% for result in results %}
-                <li><a href="{{ result }}" target="_blank">{{ result }}</a></li>
-                {% endfor %}
+                <!-- Aqui você pode adicionar código para exibir os resultados da busca -->
+                <li><a href="https://www.google.com/search?q={{ query }}" target="_blank">{{ query }}</a></li>
             </ul>
         </div>
         {% endif %}

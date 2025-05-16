@@ -38,12 +38,23 @@ button:hover {
     color: #555;
 }
 
+footer {
+    margin-top: 100px;
+}
+
 .patrocinador {
     width: 200px;
     height: auto;
 }
 
 .butterfly {
-    width: 80px;
-    margin-bottom: 20px;
+    width: 150px;
+    height: auto;
+    animation: butterflyAnim 5s infinite;
+}
+
+@keyframes butterflyAnim {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(15deg); }
+    100% { transform: translateY(0) rotate(0deg); }
 }
